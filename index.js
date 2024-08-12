@@ -1,11 +1,14 @@
+require('dotenv').config();
 const express = require('express');
+
+
 const app = express();
 const port = process.env.PORT || 5000;
 const cors = require('cors');
 
 // CORS options
 const corsOptions = {
-  origin: 'https://faizfolio.onrender.com', 
+  origin: 'http://localhost:3000', 
   methods: 'POST',
 };
 
