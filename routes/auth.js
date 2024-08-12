@@ -3,7 +3,7 @@ const express=require('express')
 const router=express.Router();
 router.post("/sendmessage",async (req,res)=>{
     const {budget,email,projectType,referencePhoto,referenceWebsite,username}=req.body;
-    // console.log(process.env.TWILIO_ACCOUNT_SID,process.env.TWILIO_AUTH_TOKEN, process.env.TWILIO_WHATSAPP,process.env.TWILIO_TO)
+  
     const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
